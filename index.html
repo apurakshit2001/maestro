@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&display=swap');
+
+        @font-face {
+            font-family: 'Maistro';
+            src: url(./Maistro.ttf) format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            line-height: 1.5;
+            height: fit-content;
+        }
+
+        h1 {
+            font-family: 'Maistro', sans-serif;
+            text-transform: uppercase;
+            font-size: 100px;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+
+        .quick-example {
+            display: block;
+            width: 80vw;
+            font-family: "Kalnia", system-ui;
+            margin: 1rem auto;
+            padding: 1rem;
+            border-radius: 0.5rem;
+
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.5s ease-in-out;
+        }
+
+        .red-bg {
+            background-color: rgba(255, 0, 0, 0.28);
+        }
+
+        .green-bg {
+            background-color: rgba(0, 128, 0, 0.38);
+        }
+
+        .blue-bg {
+            background-color: rgba(0, 0, 255, 0.41);
+        }
+
+        .quick-example:hover {
+            grid-template-rows: 1fr;
+        }
+
+        .quick-example>div {
+            overflow: hidden;
+        }
+
+        .img-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 1rem;
+        }
+
+        img {
+            width: 200px;
+            height: auto;
+            object-fit: contain;
+            margin-right: 1rem;
+        }
+
+        .works {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        @media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 60px;
+    }
+
+    .quick-example {
+        width: 95vw;
+        padding: 0.5rem;
+    }
+
+    .img-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .myfvrt iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    .works ul {
+        padding-left: 1rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    li {
+        font-size: 0.9rem;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <h1>Music Maestro</h1>
+    <div class="quick-example red-bg">
+        <div>
+            <h3>Ludwig van Beethoven</h3>
+            <p>Ludwig van Beethoven was a German composer and pianist. He remains one of the most recognized and
+                influential composers in the history of Western music. His works span the transition from the Classical
+                to the Romantic eras in classical music.</p>
+            <div class="img-container">
+                <img src="./bethoven.jpg" alt="Ludwig van Beethoven">
+                <div class="works">
+                    <h4>Works</h4>
+                    <ul>
+                        <li>Symphony No. 9 in D minor, Op. 125</li>
+                        <li>Piano Sonata No. 14 in C-sharp minor, Op. 27, No. 2</li>
+                        <li>String Quartet No. 14 in D minor, Op. 130</li>
+                    </ul>
+                </div>
+                <div class="myfvrt">
+                    <h4>My Favourite</h4>
+                    <iframe width="560" height="215" src="https://www.youtube.com/embed/q9bU12gXUyM?si=pGtgluFWyk93Yg8A"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="quick-example green-bg">
+        <div>
+            <h3>Johann Sebastian Bach</h3>
+            <p>Johann Sebastian Bach was a German composer and musician of the Baroque period. He is known for
+                instrumental compositions such as the Brandenburg Concertos and vocal music like the St. Matthew
+                Passion. His contributions to classical music are immense.</p>
+            <div class="img-container">
+                <img src="./bach.jpg" alt="Johann Sebastian Bach">
+                <div class="works">
+                    <h4>Works</h4>
+                    <ul>
+                        <li>Brandenburg Concerto No. 3 in G major, BWV 1048</li>
+                        <li>Toccata and Fugue in D minor, BWV 565</li>
+                        <li>Mass in B minor, BWV 232</li>
+                    </ul>
+                </div>
+                <div class="myfvrt">
+                    <h4>My Favourite</h4>
+                    <iframe width="560" height="215" src="https://www.youtube.com/embed/u-Xv_ave7p8?si=HD7B-BYYGsYeb2sQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="quick-example blue-bg">
+        <div>
+            <h3>Wolfgang Amadeus Mozart</h3>
+            <p>Wolfgang Amadeus Mozart was a prolific and influential composer of the Classical era. Born in Salzburg,
+                he showed prodigious ability from his earliest childhood and created over 600 works, many acknowledged
+                as pinnacles of symphonic, chamber, operatic, and choral music.</p>
+            <div class="img-container">
+                <img src="./mozart.jpg" alt="Wolfgang Amadeus Mozart">
+                <div class="works">
+                    <h4>Works</h4>
+                    <ul>
+                        <li>Symphony No. 40 in G minor, K. 550</li>
+                        <li>The Magic Flute, K. 620</li>
+                        <li>Piano Concerto No. 21 in C major, K. 467</li>
+                    </ul>
+                </div>
+                <div class="myfvrt">
+                    <h4>My Favourite</h4>
+                    <iframe width="560" height="215" src="https://www.youtube.com/embed/Zi8vJ_lMxQI?si=R_w069e14ZrbdYGR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+</html>
