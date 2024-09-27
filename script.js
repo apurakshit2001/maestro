@@ -46,4 +46,4 @@ setInterval(() => {
     applyRandomBorderRadius2();
     applyRandomBorderRadius3();
     applyRandomBorderRadius4();
-}, 200);
+}, 400);
