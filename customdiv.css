@@ -8,25 +8,46 @@
 .custom-div {
     height: 200px;
     width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: transparent;
+    font-size: 100px;
+
     background: linear-gradient(to bottom, rgb(248, 0, 215), red);
     transition:
         border-radius 600ms linear,
         background 1s linear,
+        color 1s linear,
         transform 1s linear,
-        box-shadow 1s linear;
+        box-shadow 1s linear,
+        z-index 1s linear,
+        -webkit-background-clip 1s linear,
+        -webkit-text-fill-color 1s linear,
+        -webkit-text-stroke 1s linear,
+        background-clip 1s linear; 
 }
 
 .custom-div:hover {
-    z-index: 2;
+    z-index: 2; 
     transform: rotate(360deg);
     border-radius: 60px 70px 40px 140px;
     background: linear-gradient(to bottom, red, rgb(248, 0, 215));
+    
+    -webkit-background-clip: text;  /* For Safari/Chrome */
+    -webkit-text-fill-color: transparent; /* Text color transparent */
+    -webkit-text-stroke: 1px white;
+    background-clip: text;  
+    color: transparent;  /* Fallback for browsers that don't support background-clip */
+
     box-shadow:
         0 0 0 10px black,
-        0 0 0 20px rgb(248, 0, 215),
+        0 0 0 20px rgba(248, 0, 215, 0.42),
         0 0 0 30px black,
-        0 0 0 40px red;
+        0 0 0 40px rgba(255, 0, 0, 0.429);
 }
+
 
 @media screen and (max-width: 600px) {
     .custom-div {
