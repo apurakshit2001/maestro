@@ -27,3 +27,24 @@
         0 0 0 30px black,
         0 0 0 40px red;
 }
+
+@media screen and (max-width: 600px) {
+    .custom-div {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+/* bulr side */
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.box:hover .box-item:not(:hover) {
+    filter: blur(5px);
+}
